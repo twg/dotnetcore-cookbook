@@ -1,4 +1,4 @@
-# dotnetcore-cookbook-cookbook
+# dotnetcore-cookbook
 
 TODO: Enter the cookbook description here.
 
@@ -16,7 +16,7 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['dotnetcore-cookbook']['bacon']</tt></td>
+    <td><tt>['dotnetcore']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -25,18 +25,18 @@ TODO: List your supported platforms.
 
 ## Usage
 
-### dotnetcore-cookbook::default
+### dotnetcore::default
 
-Include `dotnetcore-cookbook` in your node's `run_list`:
+Include `dotnetcore` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[dotnetcore-cookbook::default]"
+    "recipe[dotnetcore::default]"
   ]
 }
 ```
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Andrew Cornies (acornies@gmail.com)
