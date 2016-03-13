@@ -7,21 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
-if node['platform'] != 'ubuntu' then
-    fail 'This cookbook currently only supports Ubuntu.'
-end
-
-apt_repository 'dotnetdev' do
-    uri node['dotnetcore']['apt_package_source']
-    components ['main']
-    distribution 'trusty'
-    arch 'amd64'
-    key node['dotnetcore']['apt_package_source_key']
-end
-
-package "dotnet" do
-    version node['dotnetcore']['version']
-    options '--force-yes'
+case node['platform']
+when 'windows'
+    include_recipe 'dotnetcore::_windows'
+when 'debian', 'ubuntu'
+    include_recipe 'dotnetcore::_ubuntu'
+else
+    fail 'This cookbook currently only supports Debian/Ubuntu and Windows.'
 end
 
 ### RESOURCE TEST

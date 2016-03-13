@@ -5,8 +5,6 @@ property :path, String, required: false, default: '.'
 property :configuration, String, required: false, default: 'Debug'
 property :args, Array, required: false, default: []
 
-#TODO process control system/daemon options
-
 # Useful properties from the `execute` resource
 property :cwd, kind_of: String
 property :environment, kind_of: Hash, default: {}
