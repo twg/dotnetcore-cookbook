@@ -11,6 +11,7 @@
 
 package 'dotnet' do
     source node['dotnetcore']['windows_source_url']
+    options '/s /v" /qn"'
 end
 
 # windows_version = Chef::ReservedNames::Win32::Version.new

@@ -7,14 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-case node['platform']
-when 'windows'
-    include_recipe 'dotnetcore::_windows'
-when 'debian', 'ubuntu'
-    include_recipe 'dotnetcore::_ubuntu'
-else
-    fail 'This cookbook currently only supports Debian/Ubuntu and Windows.'
-end
+include_recipe 'dotnetcore::_platform'
 
 ### RESOURCE TEST
 # app_dir = '/home/vagrant/myapp'
@@ -26,14 +19,16 @@ end
 #     only_if { !::File.exist?("#{app_dir}/NuGet.Config") }
 # end
 
-# dotnet_restore 'test' do
-#     nuget_config_file "#{app_dir}/NuGet.Config"
-#     user 'root'
-#     cwd app_dir
-# end
+#dotnet_restore 'test' do
+#    nuget_config_file "#{app_dir}/NuGet.Config"
+#    user 'root'
+#    cwd app_dir
+#end
 
-# dotnet_run 'test' do
+# dotnet 'test' do
+#     nuget_config_file "#{app_dir}/NuGet.Config"
 #     path app_dir
 #     user 'root'
+#     cwd app_dir
 # end
 ### END
