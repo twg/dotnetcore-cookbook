@@ -1,3 +1,4 @@
+<a href="https://codeclimate.com/github/acornies/dotnetcore-cookbook"><img src="https://codeclimate.com/github/acornies/dotnetcore-cookbook/badges/gpa.svg" /></a>
 # dotnetcore-cookbook
 
 A Chef cookbook for managing .NET Core (http://dotnet.github.io/) installation and applications on all supported platforms. Simply include `recipe[dotnetcore]` in your runlist to utilize the `dotnet` resource provider. This cookbook is in it's early stages and will try to keep up with the pace of .NET Core development.
