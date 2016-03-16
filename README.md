@@ -82,6 +82,10 @@ dotnet 'test' do
 end
 ```
 
+## Development
+
+This cookbook uses <a href="https://github.com/opscode/test-kitchen" target="_blank">test-kitchen</a> and <a href="http://serverspec.org/" target="_blank">Serverspec/RSpec</a> with the Vagrant driver. For local Windows testing, please follow <a href="http://kitchen.ci/blog/test-kitchen-windows-test-flight-with-vagrant/" target="_blank">this blog post</a> to create and add a local Vagrant Windows (Server 2012 R2) box.
+
 ## License and Authors
 
 Author:: Andrew Cornies (acornies@gmail.com)
