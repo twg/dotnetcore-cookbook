@@ -10,15 +10,7 @@ platforms:
   - name: windows-2012r2
 
 suites:
-  - name: package
+  - name: default
     run_list: 
       - recipe[dotnetcore::default]
     attributes:
-    excludes:
-      - windows-2012r2
-  - name: winpackage
-    run_list:
-      - recipe[dotnetcore::default]
-    attributes:
-    excludes:
-      - ubuntu-14.04
