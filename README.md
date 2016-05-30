@@ -66,7 +66,7 @@ Include `dotnetcore` in your node's `run_list`:
 ## Resource/Provider
 
 ###dotnet
-Used for restoring package dependancies, compilation, and running your application.
+Used for restoring package dependencies, compilation, and running your application.
 ```ruby
 dotnet 'test' do
   action :run
