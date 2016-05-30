@@ -10,7 +10,7 @@
 # require 'chef/win32/version'
 
 windows_package 'dotnet' do
-    source node['dotnetcore']['windows_source_url']
+    source node['dotnetcore']['package']['source_url']
     installer_type :custom
     options '/s /v" /qn"'
 end
