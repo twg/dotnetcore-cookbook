@@ -18,9 +18,21 @@ A Chef cookbook for managing .NET Core (http://dotnet.github.io/) installation a
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['dotnetcore']['version']</tt></td>
+    <td><tt>['dotnetcore']['package']['name']</tt></td>
+    <td>String</td>
+    <td>The apt-get package name for Debian/Ubuntu.</td>
+    <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
+  </tr>
+  <tr>
+    <td><tt>['dotnetcore']['package']['version']</tt></td>
     <td>String</td>
     <td>The apt-get package version for Debian/Ubuntu.</td>
+    <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
+  </tr>
+  <tr>
+    <td><tt>['dotnetcore']['package']['source_url']</tt></td>
+    <td>String</td>
+    <td>An absolute URL for the .NET Core Windows MSI installer</td>
     <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
   </tr>
   <tr>
@@ -33,12 +45,6 @@ A Chef cookbook for managing .NET Core (http://dotnet.github.io/) installation a
     <td><tt>['dotnetcore']['apt_package_source_key']</tt></td>
     <td>String</td>
     <td>The source URL for the apt keyserver gpg key.</td>
-    <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
-  </tr>
-   <tr>
-    <td><tt>['dotnetcore']['windows_source_url']</tt></td>
-    <td>String</td>
-    <td>An absolute URL for the .NET Core Windows MSI installer</td>
     <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
   </tr>
 </table>
@@ -60,7 +66,7 @@ Include `dotnetcore` in your node's `run_list`:
 ## Resource/Provider
 
 ###dotnet
-Used for restoring package dependancies, compilation, and running your application.
+Used for restoring package dependencies, compilation, and running your application.
 ```ruby
 dotnet 'test' do
   action :run
