@@ -19,7 +19,7 @@ apt_repository 'dotnetdev' do
     key node['dotnetcore']['apt_package_source_key']
 end
 
-package "#{node['dotnetcore']['package']['name']}" do
+package node['dotnetcore']['package']['name'] do
     version node['dotnetcore']['package']['version']
     options '--force-yes'
 end
