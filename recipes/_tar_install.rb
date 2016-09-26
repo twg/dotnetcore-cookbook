@@ -21,6 +21,6 @@ tar_extract 'https://go.microsoft.com/fwlink/?LinkID=827529' do
   creates '/opt/dotnet/dotnet'
 end
 
-link '/usr/local/bin/dotnet' do
+link '/usr/bin/dotnet' do
   to '/opt/dotnet/dotnet'
 end
