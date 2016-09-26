@@ -16,6 +16,10 @@ when 'ubuntu'
     describe command('dotnet --help') do
         its(:stdout) { should match /.NET Command Line Tools / }
     end
+when 'centos', 'amazon', 'oracle'
+  describe command('dotnet --help') do
+      its(:stdout) { should match /.NET Command Line Tools / }
+  end
 end
 
 #Agnostic tests below
