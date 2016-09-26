@@ -6,6 +6,8 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+# Installs dotnetcore using the tar instructions intended for CentOS, Oracle Linux, and Amazon
+# https://www.microsoft.com/net/core#centos
 
 package 'libunwind'
 package 'libicu'
@@ -19,6 +21,6 @@ tar_extract 'https://go.microsoft.com/fwlink/?LinkID=827529' do
   creates '/opt/dotnet/dotnet'
 end
 
-link '/opt/dotnet/dotnet' do
-  to '/usr/local/bin/dotnet'
+link '/usr/local/bin/dotnet' do
+  to '/opt/dotnet/dotnet'
 end
