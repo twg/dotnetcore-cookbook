@@ -7,8 +7,13 @@ long_description 'Installs/Configures dotnetcore'
 version          '1.1.0'
 
 depends 'apt', '~> 2.9.2'
+depends 'tar'
 
 supports 'ubuntu', '= 14.04'
+supports 'ubuntu', '= 16.04'
+supports 'centos', '= 7.1'
+supports 'oracle', '= 7.1'
+supports 'amazon'
 supports 'windows'
 
 provides 'dotnetcore::default'
