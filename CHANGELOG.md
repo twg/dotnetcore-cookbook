@@ -1,3 +1,7 @@
+# 1.1.1
+
+Added more platforms Ubuntu 16.04, CentOS 7.1, Oracle 7.1, Amazon
+
 # 1.1.0
 
 Minor update to dotnetcore package attributes, tested with ASP.NET Core RC2 (preview).
