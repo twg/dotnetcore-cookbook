@@ -12,6 +12,8 @@ when 'windows'
     include_recipe 'dotnetcore::_windows'
 when 'debian', 'ubuntu'
     include_recipe 'dotnetcore::_ubuntu'
+when 'centos', 'amazon', 'oracle'
+    include_recipe 'dotnetcore::_tar_install'
 else
-    fail 'This cookbook currently only supports Debian/Ubuntu and Windows.'
+    fail 'This cookbook currently only supports Debian/Ubuntu, CentOS/Amazon/Oracle, and Windows.'
 end

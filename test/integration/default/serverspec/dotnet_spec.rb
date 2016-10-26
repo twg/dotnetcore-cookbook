@@ -9,14 +9,17 @@ when 'windows'
 
 when 'ubuntu'
 
-    describe package('dotnet') do
+    describe package('dotnet-dev-1.0.0-preview2-003131') do
         it { should be_installed }
-    end 
-    
-    describe command('dotnet --version') do
-        its(:stdout) { should match /.NET Command Line Tools / }
-    end 
+    end
 
+    describe command('dotnet --help') do
+        its(:stdout) { should match /.NET Command Line Tools / }
+    end
+when 'centos', 'amazon', 'oracle'
+  describe command('dotnet --help') do
+      its(:stdout) { should match /.NET Command Line Tools / }
+  end
 end
 
 #Agnostic tests below
