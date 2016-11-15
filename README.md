@@ -5,7 +5,12 @@ A Chef cookbook for managing .NET Core (http://dotnet.github.io/) installation a
 
 ## Supported Platforms
 
-- Ubuntu 14.04 (trusty)
+- Ubuntu 16.04
+- Ubuntu 14.04
+- Centos 7.1
+- Oracle 7.1
+- Redhat 7.1
+- Amazon
 - Windows Server 2012 R2
 
 ## Attributes
