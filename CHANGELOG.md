@@ -1,3 +1,7 @@
+# 1.1.2
+
+Add support for Red Hat 7.1 and later
+
 # 1.1.1
 
 Added more platforms Ubuntu 16.04, CentOS 7.1, Oracle 7.1, Amazon
