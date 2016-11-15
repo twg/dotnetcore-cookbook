@@ -14,11 +14,11 @@ when 'ubuntu'
     end
 
     describe command('dotnet --help') do
-        its(:stdout) { should match /.NET Command Line Tools / }
+        its(:stdout) { should contain('.NET Command Line Tools') }
     end
 when 'centos', 'amazon', 'oracle'
   describe command('dotnet --help') do
-      its(:stdout) { should match /.NET Command Line Tools / }
+      its(:stdout) { should contain('.NET Command Line Tools') }
   end
 end
 
