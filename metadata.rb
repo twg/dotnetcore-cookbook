@@ -23,3 +23,4 @@ source_url 'https://github.com/acornies/dotnetcore-cookbook'
 issues_url 'https://github.com/acornies/dotnetcore-cookbook/issues'
 
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+license 'Apache v2.0'
