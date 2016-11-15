@@ -41,6 +41,12 @@ A Chef cookbook for managing .NET Core (http://dotnet.github.io/) installation a
     <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
   </tr>
   <tr>
+    <td><tt>['dotnetcore']['package']['tar']</tt></td>
+    <td>String</td>
+    <td>An absolute URL for the RHEL family tar file</td>
+    <td><tt>See <a href="attributes/default.rb" target="_blank">default.rb</a></tt></td>
+  </tr>
+  <tr>
     <td><tt>['dotnetcore']['apt_package_source']</tt></td>
     <td>String</td>
     <td>The apt-get package source repository server</td>
