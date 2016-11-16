@@ -16,7 +16,7 @@ directory '/opt/dotnet' do
   recursive true
 end
 
-tar_extract 'https://go.microsoft.com/fwlink/?LinkID=827529' do
+tar_extract node['dotnetcore']['package']['tar'] do
   target_dir '/opt/dotnet'
   creates '/opt/dotnet/dotnet'
 end
