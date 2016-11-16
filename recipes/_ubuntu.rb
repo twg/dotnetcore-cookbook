@@ -20,7 +20,7 @@ apt_repository 'dotnetdev' do
     components ['main']
     distribution node['lsb']['codename']
     arch 'amd64'
-    key node['dotnetcore']['apt_package_source_key']
+    key "#{node['dotnetcore']['apt_package_source']}/dists/#{node['lsb']['codename']}/Release.gpg"
 end
 
 package node['dotnetcore']['package']['name'] do
