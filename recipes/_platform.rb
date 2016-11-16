@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+log "Platform is #{node['platform_family']}"
+
 case node['platform_family']
 when 'windows'
     include_recipe 'dotnetcore::_windows'

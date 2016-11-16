@@ -7,6 +7,7 @@ long_description 'Installs/Configures dotnetcore'
 version          '1.1.2'
 
 depends 'apt', '~> 2.9.2'
+depends 'chocolatey', '~> 1.0.3'
 depends 'tar'
 
 supports 'ubuntu', '= 14.04'
